@@ -59,12 +59,20 @@ namespace StringTutorial
 
             // Interpolateion and concatenation
             finalEncryption = "Secret-" + finalEncryption + "-Code";
-            Console.WriteLine(finalEncryption);
-            Console.ReadKey();
 
             // String conversion using ASCII values to shift each character by 1
-
-
+            char[] ascii_conv = finalEncryption.ToCharArray();
+            for (int i = 0; i < finalEncryption.Count(); i++)
+            {
+                char current_char = finalEncryption[i];
+                int ascii = (int)current_char;
+                ascii += 1;
+                current_char = (char)ascii;
+                ascii_conv[i] = current_char;
+            }
+            finalEncryption = new string(ascii_conv);
+            Console.WriteLine(finalEncryption);
+            Console.ReadKey();
 
             return finalEncryption;
         }
