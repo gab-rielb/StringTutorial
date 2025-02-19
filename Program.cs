@@ -58,7 +58,9 @@ namespace StringTutorial
             finalEncryption = new string(capitals);
 
             // Interpolateion and concatenation
-
+            finalEncryption = "Secret-" + finalEncryption + "-Code";
+            Console.WriteLine(finalEncryption);
+            Console.ReadKey();
 
             // String conversion using ASCII values to shift each character by 1
 
