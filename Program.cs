@@ -49,15 +49,13 @@ namespace StringTutorial
             finalEncryption = new string(reversed);
 
             // Convert every second charatcer to uppercase
-            char[] temp_arrray = finalEncryption.ToCharArray();
+            char[] capitals = finalEncryption.ToCharArray();
             for (int i = 0; i < finalEncryption.Count();)
             {
-                temp_arrray[i] = char.ToUpper(temp_arrray[i]);
+                capitals[i] = char.ToUpper(capitals[i]);
                 i += 2;
             }
-            finalEncryption = new string(temp_arrray);
-            Console.Write(finalEncryption);
-            Console.ReadKey();
+            finalEncryption = new string(capitals);
 
             // Interpolateion and concatenation
 
