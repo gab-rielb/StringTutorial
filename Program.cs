@@ -48,12 +48,16 @@ namespace StringTutorial
             Array.Reverse(reversed);
             finalEncryption = new string(reversed);
 
+            // Convert every second charatcer to uppercase
+            char[] temp_arrray = finalEncryption.ToCharArray();
+            for (int i = 0; i < finalEncryption.Count();)
+            {
+                temp_arrray[i] = char.ToUpper(temp_arrray[i]);
+                i += 2;
+            }
+            finalEncryption = new string(temp_arrray);
             Console.Write(finalEncryption);
             Console.ReadKey();
-
-
-            // Convert every second charatcer to uppercase
-
 
             // Interpolateion and concatenation
 
